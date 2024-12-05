@@ -33,5 +33,17 @@
             <button type="submit" class="general-btn">Submit Payment</button>
         </form>
     </div>
+    <script>
+        const expiryInput = document.getElementById('expiry');
+
+        expiryInput.addEventListener('input', (event) => {
+            let input = expiryInput.value;
+            input = input.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+            if (input.length > 2) {
+                input = input.slice(0, 2) + '/' + input.slice(2, 4); // Add slash after MM
+            }
+            expiryInput.value = input.slice(0, 5); // Limit to 5 characters (MM/YY)
+        });
+    </script>
 </body>
 </html>
