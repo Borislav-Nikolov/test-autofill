@@ -34,6 +34,14 @@ def card_form():
     return render_template('cardform.html')
 
 
+@app.route('/cardformseparateddate', methods=['GET', 'POST'])
+def card_form_separated_date():
+    if request.method == 'POST':
+        return redirect(url_for('general_success'))
+
+    return render_template('cardformseparateddate.html')
+
+
 @app.route('/general_success')
 def general_success():
     return render_template('generalsuccess.html')
