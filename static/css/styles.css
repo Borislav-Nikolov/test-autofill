@@ -21,7 +21,20 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.btn {
+.general-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.general-btn:hover {
+    background-color: #45a049;
+}
+.link-btn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -32,6 +45,6 @@ p {
     transition: background-color 0.3s ease;
     margin: 16px;
 }
-.btn:hover {
+.link-btn:hover {
     background-color: #0056b3;
 }

@@ -26,6 +26,19 @@ def login_bad_username():
     return render_template('indexbadusername.html')
 
 
+@app.route('/cardform', methods=['GET', 'POST'])
+def card_form():
+    if request.method == 'POST':
+        return redirect(url_for('general_success'))
+
+    return render_template('cardform.html')
+
+
+@app.route('/general_success')
+def general_success():
+    return render_template('generalsuccess.html')
+
+
 @app.route('/home')
 def home():
     return render_template('home.html')
@@ -42,5 +55,5 @@ def page_selector():
 
 
 if __name__ == '__main__':
-    http_server = WSGIServer(('0.0.0.0', 8080), app)
+    http_server = WSGIServer(('0.0.0.0', 8081), app)
     http_server.serve_forever()

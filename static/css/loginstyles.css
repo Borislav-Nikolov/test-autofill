@@ -18,16 +18,3 @@
 .captcha-image img {
     max-width: 100%;
 }
-.login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.login-btn:hover {
-    background-color: #45a049;
-}
